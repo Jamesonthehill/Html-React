@@ -5,11 +5,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> 이건우 </title>
+<title> james </title>
+
+<!-- css 내용 -->
+<style type="text/css">
+	table, th, td {
+			border: 1px solid black; /*  1픽셀 단위의 검은 선을 넣겠다 */
+			border-collapse: separate; /*  */
+			}
+			
+			th, td {
+				padding: 15px;	
+			}
+</style>
+
 </head>
+
 <body>
 
 <table border="1">
+		<thead> <!--  해드에다가 묶어서 적용-->
 		<tr>
 			<td>번호</td>
 			<td>이름</td>
@@ -20,6 +35,8 @@
 			<td>주소</td>
 			<td>사진</td>
 		</tr>
+		</thead>
+		<tbody>
 		<tr>
 			<td>02-534-2244</td>
 			<td>김태희</td>
@@ -30,7 +47,9 @@
 			<td>강남구 서초구 정지훈의 집</td>
 			<td width= height=><img src="./kim.jpg" width="150" height="150"></td>
 		</tr>
-				<tr>
+		</tbody>
+		<tfoot>
+		<tr>
 			<td>02-534-2212</td>
 			<td>지연</td>
 			<td>Tiara</td>
@@ -40,6 +59,7 @@
 			<td>잠실역 부근</td>
 			<td width= height=><img src="./ji.jpg" width="150" height="150"></td>
 		</tr>
+		</tfoot>
 				<tr>
 			<td>02-534-3333</td>
 			<td>정지훈</td>
