@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>James</title>
+</head>
+<body>
+	<p>회원가입</p>
+	
+	<form action="" method="post" id="form" name=""enctype="application/x-www-form-urlencoded">
+		
+		아이디 : 	<input type="text" id="id" name="id" maxlength="16" placeholder="아이디를 입력해주세요">
+		<br>비밀번호 :	<input type="password" id="pwd" name="pwd" maxlength="16" placeholder="비밀번호를 입력해주세요">		
+		<br>비밀번호 확인:<input type="password" id="pwd" name="pwd" maxlength="16" placeholder="비밀번호를 입력해주세요">		
+		<br>이름 :	<input type="text" maxlength="8" autocomplete="name">
+		<br>메일주소 :	<input type="text" id="address" maxlength="50">
+		<br>전화번호 :	<input type="text" id="address" maxlength="50">
+		<br><input type="button" id="button" name="button" value="제출" onclick=(here())>
+	
+	</form>
+
+		<!-- 박스 길이 좌우 사이즈  -->
+		<!-- placeholder 아이디 나오도록 -->	
+		<!-- maxlength="20" 글짜수 제한-->
+		<!-- value="maxkguy" 수정 화면때 데이터 미리 넣어주기 -->
+	<script type="text/javascript">
+		
+	function here(){
+			alert("idl: " + document.getElementById("id1").value)
+			document.getElementById("form".submit());
+			
+	
+		}
+	</script>
+</body>
+</html>
