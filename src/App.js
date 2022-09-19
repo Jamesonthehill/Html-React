@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 function App() {
 
 
-    let posts ="강남 고기 맛집";  // style 도 여기서 만들어서 사용이 가능하다.
+    // let posts ="강남 고기 맛집";  // style 도 여기서 만들어서 사용이 가능하다.
     // <h4 style={{ color : "skyblue", fontSize : '30px' }}> { posts }</h4>  {/*중괄호 열면 렌더링이 가능하다. ,변수 , 함수명, 객체 다가능*/}
     // document.getElementById("").innerHTML = ''
     // D:\factory\frontEnd\demo\src\App.js
@@ -19,14 +19,10 @@ function App() {
     // 위에것이랑 같음  onClick = { () => { 실행할내용 } };
     let [a,b] = useState(['남자 코트 추천', '여자 청바지 추천', '알파고 세트추천']);  // ES6 destructuring 문법 =   var [a,b] = [10, 100];
     let [따봉, 따봉변경] = useState(0);
-    let [modal, setModal] = useState(false);
 
-    return (
-        <div>
-            <button onClick={() => setModal(true)}>모달열기</button>
-            {modal === true ? <Modal/> : null}
-        </div>
-    );
+    // let [openModal, openModal2] = useState(false);
+
+    let [modal, setModal] = useState(false);
 
 
 
@@ -37,8 +33,6 @@ function App() {
         b(newArray);
         // b((['남자 코트 추천', '여자 청바지 추천', '유니섹스 코트추천'])); // 데이터를 아예 갈아 치우는 함수
     }
-
-
     function Modal() {
         return (
             <div className="modal">
@@ -46,16 +40,27 @@ function App() {
                 <p>날짜</p>
                 <p>상세내용</p>
             </div>
-    )
+        )
     }
-
+    function Modal2() {
+        return (
+            <div className="modal">
+                <h2>제품</h2>
+                <p>날짜</p>
+                <p>상세내용</p>
+            </div>
+        )
+    }
     return (
     <div className="App">
         <div className="black-nav">
             <div> 개발 BLOG</div>
         </div>
             <div className="list">
-                <button onClick={ () => Modal() }>상세보기</button>
+                <button onClick={ ()=> { setModal(!modal) }}>상세보기</button>
+                {modal === true ? <Modal /> : false}
+            </div>
+                <div>
                 <h3>{ a[2] }</h3>
                 <p>2월 17일 발행</p>
                 <hr/>
@@ -71,7 +76,7 @@ function App() {
 
             <div className="list">
                 {/*<input type={"button"} value={"이름 바꾸기"} onClick={ newArray }/>*/}
-                <button onClick={ titleChange } >이름 바꾸기</button>
+                <button onClick={ () => titleChange() } >이름 바꾸기</button>
                 <h3>{ a[0] }<span onClick={() => { 따봉변경(따봉 + 1)}}>👍</span> {따봉} </h3>
                 <p>3월 27일 발행</p>
                 <hr/>
